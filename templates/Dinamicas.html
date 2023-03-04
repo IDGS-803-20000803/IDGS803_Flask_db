@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% from "_macros.html" import render_input %}
+<div class="container-fluid">
+  <div class="row">
+      <div class="">
+        <h1>BOX DINAMICS</h1>
+        <form class="from-horizontal" action="/calcular" method="POST">
+          
+          {% for i in range(numberFields) %}
+          {{ render_input("txtNum", "N"~(i + 1), type="number") }}
+          {% endfor %}
+          <div class="my-3 text-center">
+            <button type="submit" class="btn btn-outline-primary" >
+            <i class="fa fa-save mx-1"></i>Calcular</button>
+         </div>
+      
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
