@@ -1,4 +1,5 @@
 import os
+
 from sqlalchemy import create_engine
 
 class Config(object):
@@ -7,5 +8,5 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLAlchemy_DATABASE_URI = "mysql+pymysql://root:root@127.0.0.1/IDGS803"
-    SQLAlchemy_TRACK_MODIFICATION = False
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@127.0.0.1:3306/idgs803'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
